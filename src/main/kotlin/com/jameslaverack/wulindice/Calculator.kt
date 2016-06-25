@@ -12,7 +12,14 @@ fun calculate_best_set(dice: Collection<Int>): Int {
 }
 
 fun bucket_dice(dice: Collection<Int>) : Map<Int, Int> {
-    var buckets = hashMapOf<Int, Int>().withDefault({0})
-    dice.forEach({buckets[it] = buckets[it]!!.plus(1)})
+    var buckets = mutableMapOf<Int, Int>()
+
+    dice.forEach({
+        if (buckets[it] != null) {
+            buckets[it] = buckets[it]!!.plus(1)
+        } else {
+            buckets[it] = 1
+        }
+    })
     return buckets
 }
