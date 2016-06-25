@@ -7,8 +7,18 @@ import java.util.*
  * <p>
  * For example: [1, 2, 3, 3, 1] has a best set of the pair of threes. Resulting in 23.
  */
-fun calculate_best_set(dice: Collection<Int>): Int {
-    return 2
+fun best_set(dice: Collection<Int>): Int {
+    val buckets = bucket_dice(dice)
+    var best = 0
+    for ((die, amount) in buckets) {
+        val setAmount = valueise(die, amount);
+        best = Math.max(best, setAmount)
+    }
+    return best;
+}
+
+fun valueise(die: Int, amount: Int): Int {
+    return amount * 10 + die;
 }
 
 fun bucket_dice(dice: Collection<Int>) : Map<Int, Int> {
