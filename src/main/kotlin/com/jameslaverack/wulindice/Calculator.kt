@@ -1,7 +1,5 @@
 package com.jameslaverack.wulindice
 
-import java.util.*
-
 /*
  * For a given collection of dice, determine the best result possible.
  * <p>
