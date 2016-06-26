@@ -30,6 +30,9 @@ the number 3 has a value of 13.
 
 ## Statistics
 
-This program is designed to calculate statistical information about rolling various. This
-is hard to calculate perfectly, and so is done by averaging large numbers of simulated
-rolls.
+This program is designed to calculate statistical information about rolling various. All
+possible dice pools from a given pool size are calculated and then their maximum set value
+taken.
+
+For example if rolling three dice, the program will consider [0, 0, 0], then [0, 0, 1], and
+so on until ending on [9, 9, 9].
