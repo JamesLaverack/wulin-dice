@@ -2,8 +2,8 @@ package com.jameslaverack.wulindice
 
 fun avg_roll(poolSize: Int) : Double {
     val rolls = mutableListOf<Int>()
-    for (i in 1..100000) {
-        rolls.add(best_set(roll_dice(poolSize)))
+    for (roll in DiceIterator(poolSize, (0..9).toList())) {
+        rolls.add(best_set(roll))
     }
     return rolls.average()
 }
