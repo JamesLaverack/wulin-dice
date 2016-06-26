@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/JamesLaverack/wulin-dice.svg?branch=master)](https://travis-ci.org/JamesLaverack/wulin-dice)
+
 # wuilin-dice
 Dice probably calculator for the Legends of the Wulin roleplaying game
 
