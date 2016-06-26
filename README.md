@@ -1,9 +1,9 @@
 # wuilin-dice
-Dice probably calculator for the Legend of the Wulin roleplaying game
+Dice probably calculator for the Legends of the Wulin roleplaying game
 
 ## Dice Rolling
 
-The Legend of the Wulin roleplaying game uses a rather unique dice rolling mechanic. In
+The Legends of the Wulin roleplaying game uses a rather unique dice rolling mechanic. In
 it a pool of ten-sided dice are rolled. A value of "10" on a die is treated as zero, so
 each die has a number from 0 to 9 inclusive.
 
@@ -20,7 +20,7 @@ Some examples:
 Rolls can have multiple sets. For example if you rolled seven dice you could get 1, 1, 2,
 2, 2, 8. Which gives a set of three twos and a set of two ones. In most cases in the game
 you care mostly about the set of the highest value. Other sets may be used in the rules,
-but we're not concerned with an implementation of the Legend of the Wulin rules here.
+but we're not concerned with an implementation of the Legends of the Wulin rules here.
 
 In some cases, a single die can be used in place of a set, when doing so the usual rules
 apply. As there is only one die, a "1" is used as the tens digit. So a single die showing
