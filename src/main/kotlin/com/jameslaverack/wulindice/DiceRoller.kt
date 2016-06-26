@@ -1,22 +1,13 @@
 package com.jameslaverack.wulindice
 
-import java.util.*
-
-fun roll_dice(numberOfDice: Int) : Collection<Int> {
-    val rng = Random()
-    var dice = mutableListOf<Int>()
-    for (i in 1..numberOfDice) {
-        dice.add(rng.nextInt(10))
-    }
-    return dice
-}
-
 fun avg_roll(poolSize: Int) : Double {
-    val rolls = mutableListOf<Int>()
-    for (i in 1..100000) {
-        rolls.add(best_set(roll_dice(poolSize)))
+    var runningTotal: Long = 0;
+    var count = 0;
+    for (roll in DiceIterator(poolSize, (0..9).toList())) {
+        runningTotal += best_set(roll)
+        count++
     }
-    return rolls.average()
+    return runningTotal.toDouble() / count.toDouble()
 }
 
 fun main(args: Array<String>) {
