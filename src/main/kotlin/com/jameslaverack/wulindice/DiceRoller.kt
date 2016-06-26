@@ -1,11 +1,13 @@
 package com.jameslaverack.wulindice
 
 fun avg_roll(poolSize: Int) : Double {
-    val rolls = mutableListOf<Int>()
+    var runningTotal: Long = 0;
+    var count = 0;
     for (roll in DiceIterator(poolSize, (0..9).toList())) {
-        rolls.add(best_set(roll))
+        runningTotal += best_set(roll)
+        count++
     }
-    return rolls.average()
+    return runningTotal.toDouble() / count.toDouble()
 }
 
 fun main(args: Array<String>) {
